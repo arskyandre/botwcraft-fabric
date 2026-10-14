@@ -1,0 +1,12 @@
+# Records of automatic runs (screenshots, videos and logs of the game): never in Git
+/runs/
+
+# The mod's Gradle outputs and the Gradle home with Minecraft's libraries
+/implementation/botwcraft-fabric/fabric/.gradle/
+/implementation/botwcraft-fabric/fabric/build/
+/implementation/botwcraft-fabric/fabric/run/
+/implementation/botwcraft-fabric/.gradle-user/
+/implementation/botwcraft-fabric/retained/
+
+__pycache__/
+*.pyc

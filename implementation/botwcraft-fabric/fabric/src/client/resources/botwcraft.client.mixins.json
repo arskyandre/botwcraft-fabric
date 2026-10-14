@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "package": "dev.botwcraft.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "CameraZoomMixin",
+    "ChatComponentMixin",
+    "ClientLevelAccessor",
+    "ClientLevelDigMixin",
+    "EntityCollideMixin",
+    "FramerateLimitTrackerMixin",
+    "InputConstantsMixin",
+    "IntegratedServerMixin",
+    "LevelExtractorMixin",
+    "LevelRendererMixin",
+    "LocalPlayerSprintMixin",
+    "MinecraftDigMixin",
+    "MinecraftMixin",
+    "RenderSetupAccessor",
+    "RenderTypeAccessor",
+    "ScreenMixin",
+    "SpriteContentsAccessor",
+    "TextureAtlasAccessor",
+    "TextureBindingAccessor",
+    "TextureManagerAccessor",
+    "WaitingForPlayerChunkMixin",
+    "WindowMixin",
+    "WorldOpenFlowsMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

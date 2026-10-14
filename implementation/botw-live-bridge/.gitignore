@@ -1,0 +1,10 @@
+# Build outputs
+build/
+build.log
+# The bridge's working folder: its installed DLL, logs, kept saves, Minecraft's game folder
+lab/
+# This machine's paths (copy local.example.json)
+local.json
+# Khronos Vulkan-Headers, cloned at the pinned revision (docs/building.md)
+vendor/Vulkan-Headers/
+__pycache__/

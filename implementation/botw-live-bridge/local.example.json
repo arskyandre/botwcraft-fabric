@@ -1,0 +1,11 @@
+{
+  "cemu": "C:/path/to/Cemu_2.6/Cemu.exe",
+  "game": "C:/path/to/The Legend of Zelda Breath of the Wild [ALZE0101]/code/U-King.rpx",
+
+  "jdk": "C:/Program Files/Eclipse Adoptium/jdk-25",
+  "gxx": "C:/mingw64/bin/g++.exe",
+  "glslang": "C:/msys64/mingw64/bin/glslangValidator.exe",
+  "ffmpeg": "C:/ffmpeg/bin/ffmpeg.exe",
+
+  "keep_my_graphic_packs": true
+}

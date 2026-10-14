@@ -1,0 +1,7 @@
+[Definition]
+titleIds = 00050000101C9400
+name = BOTW x Minecraft bridge
+path = "The Legend of Zelda: Breath of the Wild/Mods/BOTW x Minecraft bridge"
+description = The game-side hooks of the BOTW x Minecraft bridge. Switched on by the launcher of the bridge for its own sessions only: without the DLL of the bridge the game does not run with this pack.
+version = 7
+default = 0

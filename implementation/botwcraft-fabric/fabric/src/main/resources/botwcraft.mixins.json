@@ -1,0 +1,29 @@
+{
+  "required": true,
+  "package": "dev.botwcraft.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "AbstractArrowMixin",
+    "AbstractBoatMixin",
+    "BlockCollisionsMixin",
+    "BlockStateBaseMixin",
+    "EntityFluidInteractionMixin",
+    "EntityPickMixin",
+    "EntitySwimMixin",
+    "FallingBlockMixin",
+    "FishingHookMixin",
+    "FlowingFluidMixin",
+    "ItemMixin",
+    "LivingEntityClimbMixin",
+    "LivingEntityGlideMixin",
+    "MinecraftServerFlightMixin",
+    "PlayerEdgeMixin",
+    "PressurePlateMixin",
+    "ProjectileMixin",
+    "ProjectileUtilMixin",
+    "ServerExplosionMixin",
+    "ServerPlayerMixin",
+    "SmithingMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

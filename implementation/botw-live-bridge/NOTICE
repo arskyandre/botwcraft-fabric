@@ -1,0 +1,78 @@
+BOTW x Minecraft bridge: the native side (implementation/botw-live-bridge)
+
+This folder contains work adapted from, or learnt from, the projects below. Their licence texts are kept beside this
+file. No file of the game, of Cemu or of Minecraft is redistributed here.
+
+
+SkyCraft, by chasmlol (MIT; LICENSE-SkyCraft)
+https://github.com/chasmlol/SkyCraft, revision bfcaf178524b92c2cdeb88e4ce0f13ef9ded6f32
+
+  live.h             the shared memory's ownership, guarded values and rings, adapted from skse/src/Link.cpp
+  native_geometry.h  triangle/box tests, plane-guided filling of blocks and the coarsening of steep surfaces,
+                     adapted from Collision.cpp
+  finite_patch.py    the same block filling, for the offline check
+  render.h, integrate.h, live_scene.h
+                     the meaning of the render ring's records and the alpha, tint and light rules, after
+                     WorldRender.cpp
+  The protocol header (../botwcraft-fabric/protocol/botwcraft_protocol.h) is SkyCraft's skycraft_protocol.h with
+  its names changed and fields added; it is included directly.
+  The Minecraft mod in ../botwcraft-fabric (BotwCraft) is an adapted, renamed copy of SkyCraft's mod; see its
+  own LICENSE, which is SkyCraft's.
+
+
+BetterVR, by Crementif (MIT; LICENSE-BetterVR)
+https://github.com/Crementif/BotW-BetterVR, revision 2e06b31f062408d3293a392df418da0ab37b1f23
+
+  vendor/vkroots.h   copied unchanged from dependencies/vkroots.h (see vkroots below)
+  pack/patch_bridge.asm, probe.cpp, body.h, physical.h
+                     the patch sequences for the 3D frame buffer marker, the camera and projection, the gamepad
+                     read and the player's character controller, adapted from
+                     patch_RND_Find3DFrameBuffer.asm, patch_RND_StereoRendering_CameraAndProjection.asm,
+                     patch_CTRL_ButtonInput.asm, patch_CTRL_EntityController.asm,
+                     src/hooking/framebuffer.cpp, camera.cpp, layer.cpp, entity_controller.cpp
+  player_render.h, link_bones.h, actors.h, runes.h
+                     places and layouts first found in patch_FirstPersonMode.asm, patch_CTRL_Bones.asm,
+                     skeleton.cpp, game_state.cpp, cemu_hooks.h and include/game_structs.h; each was checked
+                     against the running US v208 program before use
+  No VR code (OpenXR, stereo projection, shared D3D runtime) is taken.
+
+
+vkroots (Apache-2.0 OR MIT; LICENSE-vkroots-Apache-2.0)
+  vendor/vkroots.h, the Vulkan layer framework, unchanged.
+
+
+Vulkan-Headers, by The Khronos Group (Apache-2.0 OR MIT)
+https://github.com/KhronosGroup/Vulkan-Headers, v1.4.328, revision 9a0f3099c8a9607a7c0f3127d8abfdc19a93e8c5
+
+  Needed to compile only. Not in this repository: docs/building.md says how to fetch it.
+
+
+WiiXLaunch-BotW, by Bladesaw Studios (GPL v3; LICENSE-WiiXLaunch, kept for reference)
+https://github.com/BladesawStudios/wiixlaunch-botw, revision 1bdab2d1978efb2bab1d296b7d2a8c408b94aa0a
+
+  Studied for how the player is found, the layout of an actor and the game's physics synchronisation
+  (include/wiixlaunch/botw/game/player.hpp, actor.hpp, docs/actor-transforms.md).
+  No code of it is copied into this project.
+
+
+The Breath of the Wild decompilation (zeldaret/botw)
+https://github.com/zeldaret/botw
+
+  Read for the names and the meaning of the game's classes and data. It describes another build of the game; no
+  code of it is copied.
+
+
+Cemu (MPL 2.0)
+https://github.com/cemu-project/Cemu, v2.6
+
+  The bridge calls functions Cemu exports (osLib_registerHLEFunction, memory_getBase, gameMeta_getTitleId) and
+  follows the register layout of its PPCState.h. No code of Cemu is copied; Cemu itself is not included.
+
+
+The game
+
+  The bridge is made for The Legend of Zelda: Breath of the Wild, Wii U, US version, update v208. It holds
+  addresses and offsets of that program, names of its actors and bones, and patches written for it. It holds no
+  part of the program itself and none of the game's assets. A copy of the game the player owns is needed to play.
+
+This project is not affiliated with Nintendo, Mojang, Microsoft, the Cemu project or any project named above.

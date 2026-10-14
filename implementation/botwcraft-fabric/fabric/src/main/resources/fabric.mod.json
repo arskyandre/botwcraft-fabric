@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "botwcraft",
+  "version": "${version}",
+  "name": "BotwCraft",
+  "description": "Play Breath of the Wild as Minecraft's player: the Minecraft side of the BOTW x Minecraft bridge. Based on SkyCraft by chasmlol.",
+  "authors": ["chasmlol (SkyCraft)", "BOTW x Minecraft bridge contributors"],
+  "contact": {
+    "homepage": "https://github.com/chasmlol/SkyCraft"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["dev.botwcraft.BotwCraft"],
+    "client": ["dev.botwcraft.client.BotwCraftClient"]
+  },
+  "mixins": [
+    "botwcraft.mixins.json",
+    { "config": "botwcraft.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

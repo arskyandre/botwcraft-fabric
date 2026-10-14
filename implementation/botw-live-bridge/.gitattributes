@@ -1,0 +1,8 @@
+# Copied dispatch source stays byte-identical to the pinned reference.
+vendor/* -text -whitespace
+# Retained accepted files remain byte-identical across checkout.
+analyze.py -text
+fixture.py -text
+*.vert -text
+*.frag -text
+LICENSE* -text -whitespace
